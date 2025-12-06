@@ -13,7 +13,7 @@ public class SimpleWikiTest {
     @Test
     void test02() {
         open("https://ru.wikipedia.org/wiki/Selenium");
-        $("body").shouldHave(text("Selenid"));
+        $("body").shouldHave(text("Selenide"));
 
         sleep(2000);
     }
