@@ -20,9 +20,14 @@ public class SearchDemoTest {
         $(By.id("user-password")).shouldBe(visible);
 
         $(By.name("interests")).shouldBe(visible);
+        $(By.name("user_email")).shouldBe(visible);
         $(By.className("nav-link")).shouldBe(visible);
+        $(By.className("btn")).shouldBe(visible);
         $(By.tagName("input")).shouldBe(visible);
+        $(By.tagName("h3")).shouldBe(visible);
         $(By.linkText("Контакты и обратная связь")).shouldBe(visible);
+        $(By.linkText("Регистрация нового пользователя в системе")).shouldBe(visible);
         $(By.partialLinkText("длинный")).shouldBe(visible);
+        $(By.partialLinkText("Контакты")).shouldBe(visible);
     }
 }
