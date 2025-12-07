@@ -17,6 +17,7 @@ public class SearchDemoTest {
 
         element(By.id("submit-button")).shouldBe(visible);
         $(By.id("submit-button")).shouldBe(visible);
+        $(By.id("user-password")).shouldBe(visible);
 
         $(By.name("interests")).shouldBe(visible);
         $(By.className("nav-link")).shouldBe(visible);
