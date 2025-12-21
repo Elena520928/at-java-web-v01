@@ -36,9 +36,6 @@ public class SearchPage {
         this.message.shouldHave(text("Пожалуйста, укажите дату вылета."));
     }
 
-<<<<<<< HEAD
-    public void isDateinPast() {
-=======
     @Step("Проверка, что дата в прошлом")
     public void isDateInPast(){
         this.message.shouldHave(text("Невозможно осуществить поиск: выбранная дата уже прошла."));

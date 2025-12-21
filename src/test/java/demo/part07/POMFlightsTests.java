@@ -1,13 +1,10 @@
 package demo.part07;
 
-<<<<<<< HEAD
-=======
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 import com.codeborne.selenide.Configuration;
->>>>>>> 991100937ac583c4049389de9b3fba220a59a145
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.part07.pages.FlightsListPage;
 import demo.part07.pages.LoginPage;
@@ -20,14 +17,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-<<<<<<< HEAD
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-
-
-=======
 @Execution(ExecutionMode.CONCURRENT)
->>>>>>> 991100937ac583c4049389de9b3fba220a59a145
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 public class POMFlightsTests {
     @BeforeAll
