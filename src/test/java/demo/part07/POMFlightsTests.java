@@ -3,6 +3,8 @@ package demo.part07;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.part07.pages.FlightsListPage;
 import demo.part07.pages.LoginPage;
@@ -19,6 +21,7 @@ public class POMFlightsTests {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+        Configuration.browser = "firefox";
     }
 
     @BeforeEach
