@@ -33,4 +33,9 @@ public class SearchPage {
     public void isDepartureDateEmpty() {
         this.message.shouldHave(text("Пожалуйста, укажите дату вылета."));
     }
+
+    @Step("Проверяем, что дата в прошлом")
+    public void isDateinPast() {this.message.shouldHave(text("Пожалуйста, укажите дату вылета."));
+    }
+
 }

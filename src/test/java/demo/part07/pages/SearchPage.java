@@ -32,4 +32,7 @@ public class SearchPage {
     public void isDepartureDateEmpty() {
         this.message.shouldHave(text("Пожалуйста, укажите дату вылета."));
     }
+
+    public void isDateinPast() {
+    }
 }

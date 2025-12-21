@@ -112,17 +112,7 @@ public class POMFlightsTests {
         // Страница поиска рейсов
         SearchPage searchPage = new SearchPage();
         searchPage.search("01.12.2025", "Москва", "Нью-Йорк");
+        searchPage.isDateinPast();
 
-
-
-        // Страница со списком найденных рейсов
-        FlightsListPage flightsList = new FlightsListPage();
-        flightsList.registerToFirstFlight();
-
-        // Страница регистрации на рейс
-        RegistrationPage registrationPage = new RegistrationPage();
-        registrationPage.isFlightDataCorrect("Москва", "Нью-Йорк");
-        registrationPage.registration("", "", "", "");
-        registrationPage.isErrorFillAllFied();
     }
 }
