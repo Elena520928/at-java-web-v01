@@ -52,6 +52,5 @@ public class SearchPage {
                     date.substring(0, 2);
         }
         return date;
->>>>>>> 991100937ac583c4049389de9b3fba220a59a145
     }
 }
