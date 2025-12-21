@@ -1,5 +1,7 @@
-package demo.part07;
+package work.part07;
 
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.part07.pages.FlightsListPage;
 import demo.part07.pages.LoginPage;
@@ -7,9 +9,6 @@ import demo.part07.pages.RegistrationPage;
 import demo.part07.pages.SearchPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
 @TestMethodOrder(MethodOrderer.DisplayName.class)
