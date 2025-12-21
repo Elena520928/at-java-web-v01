@@ -101,4 +101,28 @@ public class POMFlightsTests {
         registrationPage.registration("", "", "", "");
         registrationPage.isErrorFillAllFied();
     }
+    // 5. Пустые поля
+    @Test
+    void test06DateinPast() {
+        // Страница логина
+        LoginPage loginPage = new LoginPage();
+        loginPage.login("standard_user", "stand_pass1");
+        loginPage.isLoginSuccessful("Иванов Иван Иванович");
+
+        // Страница поиска рейсов
+        SearchPage searchPage = new SearchPage();
+        searchPage.search("01.12.2025", "Москва", "Нью-Йорк");
+
+
+
+        // Страница со списком найденных рейсов
+        FlightsListPage flightsList = new FlightsListPage();
+        flightsList.registerToFirstFlight();
+
+        // Страница регистрации на рейс
+        RegistrationPage registrationPage = new RegistrationPage();
+        registrationPage.isFlightDataCorrect("Москва", "Нью-Йорк");
+        registrationPage.registration("", "", "", "");
+        registrationPage.isErrorFillAllFied();
+    }
 }

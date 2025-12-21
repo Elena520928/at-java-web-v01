@@ -115,4 +115,22 @@ public class SimpleFlightsTests {
         alert.accept();
         $("#registrationMessage").shouldHave(text("Регистрация успешно завершена!"));
     }
+
+    //5. Дата в прошлом
+    @Test
+    void test06DateinPast() {
+        //Страница логина
+        $("#username").setValue("standard_user");
+        $("#password").setValue("stand_pass1");
+        $("#loginButton").click();
+        $("#greeting").shouldHave(text("Добро пожаловать, Иванов Иван Иванович!"));
+
+        //Страница поиска
+        $("#departureCity").selectOption("Москва");
+        $("#arrivalCity").selectOption("Нью-Йорк");
+        $("#departureDate").setValue("01.12.2025");
+        $x("//button[.='Найти']").click();
+        $("#searchMessage").shouldHave(text("Невозможно осуществить поиск: выбранная дата уже прошла."));
+
+    }
 }
